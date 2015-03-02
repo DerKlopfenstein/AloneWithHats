@@ -143,7 +143,7 @@ public class CharacterController2D: MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other == triggerRm1.GetComponent<BoxCollider2D>())
+        /*if (other == triggerRm1.GetComponent<BoxCollider2D>())
         {
             mask2.GetComponent<Appear>().enabled = true;
 			Debug.Log (rms1);
@@ -153,7 +153,7 @@ public class CharacterController2D: MonoBehaviour
 				roomopen.Play ();
 				rms1 = true;
 			}
-        }
+        }*/
 
         if (other == triggerRm3.GetComponent<BoxCollider2D>())
         {
@@ -260,8 +260,8 @@ public class CharacterController2D: MonoBehaviour
 			
 			rigidbody2D.gravityScale = .1f;
 			floating = true;
-			
-			if(Input.GetButtonDown ("Jump")) 
+
+            if (Input.GetKeyDown(KeyCode.J)) 
             {
 				rigidbody2D.AddForce(Vector2.up * underwaterJump, ForceMode2D.Impulse);
 				swimsound.Play();
@@ -317,15 +317,22 @@ public class CharacterController2D: MonoBehaviour
 	
 	void Jump ()
 	{
-        
-		if ((grounded1 || grounded2) && Input.GetButtonDown ("Jump") && !floating) 
+		if ((grounded1 || grounded2) && Input.GetKeyDown(KeyCode.J) && !floating)
         {
 			rigidbody2D.AddForce(Vector2.up * jumpValue,ForceMode2D.Impulse);
-			jumpsound.Play();
+            jumpsound.Play();
+
+            if (rms1 == false)
+            {
+                mask2.GetComponent<Appear>().enabled = true;
+                roomopen.pitch = Random.Range(.3f, 3f);
+                roomopen.Play();
+                rms1 = true;
+            }
 		}
 
-		
-		if (Input.GetButton ("Jump") && (jumpTimer < 0.3 && rigidbody2D.velocity.y > 0) && !floating) 
+        //THIS DOESN'T ACTIVATE ANYMORE
+        if (Input.GetKeyDown(KeyCode.J) && (jumpTimer < 0.3 && rigidbody2D.velocity.y > 0) && !floating)
         {
 		    rigidbody2D.AddForce(Vector2.up * increaseRate,ForceMode2D.Force);
 		}
