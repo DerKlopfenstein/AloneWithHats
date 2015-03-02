@@ -3,8 +3,6 @@ using System.Collections;
 
 public class CharacterController2D: MonoBehaviour 
 {
-	
-	
 	bool facingRight = true;
 	
 	float jumpValue = 5.0f;
@@ -100,7 +98,6 @@ public class CharacterController2D: MonoBehaviour
 	
 	void Update() 
     {
-        Debug.Log(hat.transform.position.x > transform.position.x - 0.15);
 		Jump();
         if (mask6.GetComponent<BoxCollider2D>().enabled == false && crate2ready)
         {
@@ -143,17 +140,6 @@ public class CharacterController2D: MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        /*if (other == triggerRm1.GetComponent<BoxCollider2D>())
-        {
-            mask2.GetComponent<Appear>().enabled = true;
-			Debug.Log (rms1);
-			if (rms1 == false) 
-			{
-				roomopen.pitch = Random.Range(.3f, 3f);
-				roomopen.Play ();
-				rms1 = true;
-			}
-        }*/
 
         if (other == triggerRm3.GetComponent<BoxCollider2D>())
         {
@@ -315,10 +301,12 @@ public class CharacterController2D: MonoBehaviour
     }
 
 	
-	void Jump ()
+	void Jump()
 	{
-		if ((grounded1 || grounded2) && Input.GetKeyDown(KeyCode.J) && !floating)
+        
+        if ((grounded1 || grounded2) && Input.GetButtonDown("Jump") && !floating)
         {
+            Debug.Log("I'm jumping!");
 			rigidbody2D.AddForce(Vector2.up * jumpValue,ForceMode2D.Impulse);
             jumpsound.Play();
 
@@ -331,10 +319,10 @@ public class CharacterController2D: MonoBehaviour
             }
 		}
 
-        //THIS DOESN'T ACTIVATE ANYMORE
-        if (Input.GetKeyDown(KeyCode.J) && (jumpTimer < 0.3 && rigidbody2D.velocity.y > 0) && !floating)
+        if (Input.GetButton("Jump") && (jumpTimer < 0.3 && rigidbody2D.velocity.y > 0) && !floating)
         {
 		    rigidbody2D.AddForce(Vector2.up * increaseRate,ForceMode2D.Force);
+            Debug.Log("I'm addin' force!");
 		}
 		
 	}
