@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{BDBCE7D3-139D-3EDB-816D-FB1D73476D25}</ProjectGuid>
+	<ProjectGuid>{DDE01C0B-895F-1D18-15FA-6B8F7352D240}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_4_6_1;UNITY_4_6;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_6_1;UNITY_4_6;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -39,35 +39,32 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>/Volumes/TOSHIBAEXT/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>/Volumes/TOSHIBAEXT/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\KeepCam.cs" />
-     <Compile Include="Assets\Scripts\Appear.cs" />
-     <Compile Include="Assets\Scripts\BoulderController.cs" />
-     <Compile Include="Assets\Scripts\CameraFollow.cs" />
-     <Compile Include="Assets\Scripts\CharacterController2D.cs" />
-     <Compile Include="Assets\Scripts\CrateController.cs" />
-     <Compile Include="Assets\Scripts\CreditsScreen.cs" />
-     <Compile Include="Assets\Scripts\ErrorScript.cs" />
-     <Compile Include="Assets\Scripts\IncrementalAppear.cs" />
-     <Compile Include="Assets\Scripts\NumberRetainer.cs" />
-     <Compile Include="Assets\Scripts\PlayerControl.cs" />
-     <Compile Include="Assets\Scripts\Splash.cs" />
-     <Compile Include="Assets\Scripts\SwitchWeap.cs" />
-     <Compile Include="Assets\Scripts\SwordController.cs" />
-     <Compile Include="Assets\Scripts\TargetController.cs" />
-     <Compile Include="Assets\Scripts\TestStrings.cs" />
-     <Compile Include="Assets\Scripts\TitleScreen.cs" />
-     <Compile Include="Assets\Scripts\WindSoundTrigger.cs" />
-     <Compile Include="Assets\Scripts\switchhat.cs" />
-     <Compile Include="Assets\keepwin.cs" />
+     <Compile Include="Assets\ObjectPersist.cs" />
+     <Compile Include="Assets\Scripts\Unused\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\Unused\NumberRetainer.cs" />
+     <Compile Include="Assets\Scripts\Unused\PlayerControl.cs" />
+     <Compile Include="Assets\Scripts\Used\Appear.cs" />
+     <Compile Include="Assets\Scripts\Used\BoulderController.cs" />
+     <Compile Include="Assets\Scripts\Used\CharacterController2D.cs" />
+     <Compile Include="Assets\Scripts\Used\CrateController.cs" />
+     <Compile Include="Assets\Scripts\Used\CreditsScreen.cs" />
+     <Compile Include="Assets\Scripts\Used\IncrementalAppear.cs" />
+     <Compile Include="Assets\Scripts\Used\Splash.cs" />
+     <Compile Include="Assets\Scripts\Used\SwitchWeap.cs" />
+     <Compile Include="Assets\Scripts\Used\SwordController.cs" />
+     <Compile Include="Assets\Scripts\Used\TargetController.cs" />
+     <Compile Include="Assets\Scripts\Used\TitleScreen.cs" />
+     <Compile Include="Assets\Scripts\Used\WindSoundTrigger.cs" />
+     <Compile Include="Assets\Scripts\Used\switchhat.cs" />
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
+ <HintPath>/Volumes/TOSHIBAEXT/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
