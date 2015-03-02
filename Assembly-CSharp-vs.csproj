@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\Used\TitleScreen.cs" />
      <Compile Include="Assets\Scripts\Used\WindSoundTrigger.cs" />
      <Compile Include="Assets\Scripts\Used\switchhat.cs" />
+     <None Include="Assets\hi aj.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Volumes/TOSHIBAEXT/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
