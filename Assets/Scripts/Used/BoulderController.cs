@@ -10,9 +10,8 @@ public class BoulderController : MonoBehaviour
     bool stopped = false;
     bool landed = false;
     Animator anim;
-
-	public AudioSource rollsound;
-	public AudioSource stopsound;
+	AudioSource rollsound;
+	AudioSource stopsound;
 
     public GameObject hallTrigger;
     public GameObject stopTrigger;
@@ -22,6 +21,18 @@ public class BoulderController : MonoBehaviour
     {
         currSpeed = 1.0f;
         anim = GetComponent<Animator>();
+        foreach(AudioSource source in GetComponents<AudioSource>())
+        {
+            if (source.clip.name == "boulderroll")
+            {
+                rollsound = source;
+            }
+
+            if(source.clip.name == "boulderclank")
+            {
+                stopsound = source;
+            }
+        }
 	}
 	
 	// Update is called once per frame

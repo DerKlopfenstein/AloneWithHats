@@ -322,7 +322,6 @@ public class CharacterController2D: MonoBehaviour
         if (Input.GetButton("Jump") && (jumpTimer < 0.3 && rigidbody2D.velocity.y > 0) && !floating)
         {
 		    rigidbody2D.AddForce(Vector2.up * increaseRate,ForceMode2D.Force);
-            Debug.Log("I'm addin' force!");
 		}
 		
 	}
