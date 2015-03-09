@@ -12,14 +12,11 @@ public class IncrementalAppear : MonoBehaviour {
 
 	void Update() 
     {
-		/*if (Input.anyKeyDown) 
-        {
-			appearScript.maximum += .3f;
-		}*/
+
 	}
 
     void AddTransparency(float num)
     {
-        appearScript.maximum -= num;
+        appearScript.maximum -= num;            //reduces maximum value (inverted Appear)
     }
 }

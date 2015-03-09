@@ -3,11 +3,11 @@ using System.Collections;
 
 public class CrateController : MonoBehaviour 
 {
-    float groundRadius = 0.2f;
-    bool crateStuck;
+    float groundRadius = 0.2f;              //radius of collision circle with crateRepeller
+    bool crateStuck;                        //true when crate hits crateRepeller
 
     public Transform crateRepeller;
-    public LayerMask box;
+    public LayerMask box;                   //layer mask for collision detection (
     public GameObject boxTrigger, mask3;
 	public AudioSource roomopensound;
 	bool roomplayed = false;
@@ -23,7 +23,9 @@ public class CrateController : MonoBehaviour
 	void Update () 
     {
 
-        crateStuck = Physics2D.OverlapCircle(crateRepeller.position, groundRadius, box);
+        crateStuck = Physics2D.OverlapCircle(crateRepeller.position, groundRadius, box);        //false if 
+
+        Debug.Log(Physics2D.OverlapCircle(crateRepeller.position, groundRadius, box));
 
         if (crateStuck)
         {
