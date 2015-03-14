@@ -10,24 +10,36 @@ public class switchhat : MonoBehaviour {
 	public Sprite fedora;
 	public Sprite crown;
 	public Sprite propeller;
+
     public GameObject player;
-	public AudioSource hatfallsoff;
-	public AudioSource gethatback;
+	AudioSource hatfallsoff;
+	AudioSource gethatback;
 	
 	private SpriteRenderer sprite;
 
 	
 	
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
 		
-		
-		
+		foreach(AudioSource source in GetComponents<AudioSource>())
+        {
+            if (source.clip.name == "gethatback")
+            {
+                gethatback = source;
+            }
+
+            if(source.clip.name == "hatblowsoff 1")
+            {
+                hatfallsoff = source;
+            }
+        }
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update()
+    {
 		sprite = GetComponent<SpriteRenderer>();
 
 
@@ -72,23 +84,30 @@ public class switchhat : MonoBehaviour {
         if (transform.parent != null)
         {
             Vector2 initialPos = transform.parent.position;
-            transform.parent = null;
-            GetComponent<BoxCollider2D>().enabled = true;
-            gameObject.AddComponent<Rigidbody2D>();
+            transform.parent = null;                                        //de-parent
+
+            GetComponent<BoxCollider2D>().enabled = true;                   
+            gameObject.AddComponent<Rigidbody2D>();                         //add physics components
+
             transform.position = initialPos + new Vector2(1.0f, 0.0f);
-            rigidbody2D.AddForce(Vector2.right * 130, ForceMode2D.Force);
-			hatfallsoff.Play ();
+            rigidbody2D.AddForce(Vector2.right * 130, ForceMode2D.Force);   //place behind player and add backward force
+
+			hatfallsoff.Play();
         }
         
     }
 
     void Return()
     {
-        transform.parent = player.transform;
-        GetComponent<BoxCollider2D>().enabled = false;
-        Object.Destroy(GetComponent<Rigidbody2D>());
+        transform.parent = player.transform;                                //re-parent
+
+        GetComponent<BoxCollider2D>().enabled = false;                      
+        Object.Destroy(GetComponent<Rigidbody2D>());                        //remove physics components
+
         transform.localPosition = new Vector2(0.0f, 0.16f);
-        transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+        transform.localRotation = new Quaternion(0.0f, 0.0f, 0.0f, 0.0f);
+        transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);               //place back in correct position, scale, rotation
+
 		gethatback.Play();
     }
 }
