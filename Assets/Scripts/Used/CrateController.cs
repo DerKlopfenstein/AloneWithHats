@@ -5,8 +5,9 @@ public class CrateController : MonoBehaviour
 {
     float groundRadius = 0.2f;              //radius of collision circle with crateRepeller
     bool crateStuck;                        //true when crate hits crateRepeller
-    LayerMask box;                          //layer mask for collision detection (only things in this layer collide with repeller)
-
+    
+    
+    public LayerMask box;                          //layer mask for collision detection (only things in this layer collide with repeller
     public Transform crateRepeller;         
     public GameObject boxTrigger, mask3;    //trigger to open the next room, mask of the next room
 	public AudioSource roomopensound;
@@ -16,7 +17,7 @@ public class CrateController : MonoBehaviour
 	// Use this for initialization
 	void Start () 
     {
-        box = gameObject.layer;
+        //box = gameObject.layer;
 	}
 	
 	// Update is called once per frame
