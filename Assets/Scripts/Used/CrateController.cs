@@ -5,7 +5,7 @@ public class CrateController : MonoBehaviour
 {
     float groundRadius = 0.2f;              //radius of collision circle with crateRepeller
     bool crateStuck;                        //true when crate hits crateRepeller
-    LayerMask box;                          //layer mask for collision detection (only things in this layer collide with repeller)
+    LayerMask box;                          //layer mask for collision detection (only things in this layer collide with repeller
 
     public Transform crateRepeller;         
     public GameObject boxTrigger, mask3;    //trigger to open the next room, mask of the next room
@@ -16,13 +16,15 @@ public class CrateController : MonoBehaviour
 	// Use this for initialization
 	void Start () 
     {
-        box = gameObject.layer;
+        int boxNum = gameObject.layer;
+        box = 1 << boxNum;
 	}
 	
 	// Update is called once per frame
 	void Update () 
     {
-        crateStuck = Physics2D.OverlapCircle(crateRepeller.position, groundRadius, box);        //false if nothing in the layer is within groundRadius of crateRepeller)
+        //Debug.Log(Physics2D.OverlapCircle(crateRepeller.position, groundRadius, box));
+        crateStuck = Physics2D.OverlapCircle(crateRepeller.position, groundRadius, box.value);        //Null (false) if nothing in the layer is within groundRadius of crateRepeller
 
         if (crateStuck)
         {
