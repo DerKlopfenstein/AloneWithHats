@@ -3,7 +3,7 @@ using System.Collections;
 
 public class IncrementalAppear : MonoBehaviour 
 {
-    //I HAVE ADDED A COMMENT!
+    //Testing Comment
 
 	Appear appearScript;
 
