@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class IncrementalAppear : MonoBehaviour {
+public class IncrementalAppear : MonoBehaviour 
+{
+    //I HAVE ADDED A COMMENT!
 
 	Appear appearScript;
 
