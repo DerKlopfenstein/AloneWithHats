@@ -1658,7 +1658,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 495911695}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bc3eb549304d451b823e5fbc4872c4c, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e2e37f17ded043fbbdec769307e2d88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &519970626
@@ -2880,7 +2880,6 @@ MonoBehaviour:
   fedora: {fileID: 21300000, guid: d562a5b829ff94dba9c0ee6174126c87, type: 3}
   crown: {fileID: 21300000, guid: 6150e991bb2fa46fea89bc37ed481d9d, type: 3}
   propeller: {fileID: 21300000, guid: 205b84f2cbaa342e184697824233f5e9, type: 3}
-  player: {fileID: 1065917434}
 --- !u!82 &783193084
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3190,7 +3189,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 863739277}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0500000007, y: -.00741565228, z: 0}
+  m_LocalPosition: {x: 0, y: -.00741565228, z: 0}
   m_LocalScale: {x: -.25, y: .25, z: -1}
   m_Children: []
   m_Father: {fileID: 1065917437}

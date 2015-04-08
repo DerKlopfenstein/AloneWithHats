@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//UPDATED
+
 public class IncrementalAppear : MonoBehaviour 
 {
-    //Testing Comment
-
 	Appear appearScript;
 
 	void Start() 
@@ -20,5 +20,6 @@ public class IncrementalAppear : MonoBehaviour
     void AddTransparency(float num)
     {
         appearScript.maximum -= num;            //reduces maximum value (inverted Appear)
+                                                //in inspector, set Appear's min and max equal
     }
 }

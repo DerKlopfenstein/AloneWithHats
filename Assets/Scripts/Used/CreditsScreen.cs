@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CreditsScreen : MonoBehaviour {
+//UPDATED
+
+public class CreditsScreen : MonoBehaviour 
+{
 
 	// Use this for initialization
 	void Start () 

@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//UPDATED
+
 public class CrateController : MonoBehaviour 
 {
     float groundRadius = 0.2f;              //radius of collision circle with crateRepeller
@@ -23,7 +25,6 @@ public class CrateController : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
     {
-        //Debug.Log(Physics2D.OverlapCircle(crateRepeller.position, groundRadius, box));
         crateStuck = Physics2D.OverlapCircle(crateRepeller.position, groundRadius, box.value);        //Null (false) if nothing in the layer is within groundRadius of crateRepeller
 
         if (crateStuck)

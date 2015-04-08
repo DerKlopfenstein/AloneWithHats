@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//CHECK FOR CORRECT BEHAVIOUR
+
 public class SwitchWeap : MonoBehaviour 
 {
     public Sprite fish, spear, sword, bow, axe;
@@ -23,7 +25,6 @@ public class SwitchWeap : MonoBehaviour
         {
             sprite.sprite = fish;
 			audioSource.clip = fishsound;
-
         }
 
         if (Input.GetKeyDown(KeyCode.R))

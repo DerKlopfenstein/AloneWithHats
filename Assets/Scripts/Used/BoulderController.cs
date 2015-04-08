@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//UPDATED
+
 public class BoulderController : MonoBehaviour 
 {
     float startSpeed = 2.0f;
     float increaseSpeed = 3.5f;
-    float currSpeed;
+    float currSpeed = 1.0f;
     bool flat = true;
     bool stopped = false;
     bool landed = false;
@@ -19,7 +21,6 @@ public class BoulderController : MonoBehaviour
 	// Use this for initialization
 	void Start () 
     {
-        currSpeed = 1.0f;
         anim = GetComponent<Animator>();
         foreach(AudioSource source in GetComponents<AudioSource>())
         {
@@ -38,12 +39,12 @@ public class BoulderController : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
     {
-        if (!landed)
+        if (!landed)                                                    //If not ready to roll
         {
-
+            rigidbody2D.velocity = new Vector2(0.0f, rigidbody2D.velocity.y);
         }
 
-        else if(!stopped && landed)
+        else if(!stopped && landed)                                     //If boulder hits the ground
         {
             if ((flat && currSpeed < startSpeed) || (!flat && currSpeed < increaseSpeed))
             {
@@ -53,26 +54,26 @@ public class BoulderController : MonoBehaviour
             rigidbody2D.velocity = new Vector2(currSpeed, rigidbody2D.velocity.y);
         }
 
-        else if (stopped)
+        else if (stopped)                                               //If boulder hits end trigger
         {
             rigidbody2D.velocity = new Vector2(0.0f, 0.0f);
             anim.SetBool("Stopped", true);
         }
 	}
 
-    void OnCollisionEnter2D(Collision2D other)
+    void OnCollisionEnter2D(Collision2D other)                          //If boulder collides with anything
     {
         landed = true;
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other == hallTrigger.GetComponent<BoxCollider2D>())
+        if (other == hallTrigger.GetComponent<BoxCollider2D>())         //Slope trigger
         {
             flat = false;
         }
 
-        if (other == stopTrigger.GetComponent<BoxCollider2D>())
+        if (other == stopTrigger.GetComponent<BoxCollider2D>())         //Stop trigger
         {
             stopped = true;
 			rollsound.mute = true;

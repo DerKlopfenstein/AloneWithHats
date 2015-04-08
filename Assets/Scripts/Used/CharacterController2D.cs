@@ -306,7 +306,6 @@ public class CharacterController2D: MonoBehaviour
         
         if ((grounded1 || grounded2) && Input.GetButtonDown("Jump") && !floating)
         {
-            Debug.Log("I'm jumping!");
 			rigidbody2D.AddForce(Vector2.up * jumpValue,ForceMode2D.Impulse);
             jumpsound.Play();
 

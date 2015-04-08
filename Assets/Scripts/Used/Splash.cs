@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Splash : MonoBehaviour {
+//UPDATED
+
+public class Splash : MonoBehaviour 
+{
 
 	AudioSource enterSound;
 	AudioSource exitSound;

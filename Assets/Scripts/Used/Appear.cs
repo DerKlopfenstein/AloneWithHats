@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//UPDATED
+
 public class Appear : MonoBehaviour 
 {
 	public float minimum = 0.0f;        //starting value

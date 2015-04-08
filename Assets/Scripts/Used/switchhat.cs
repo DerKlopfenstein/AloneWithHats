@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class switchhat : MonoBehaviour {
-	
-	public Sprite tophat;
+//UPDATED
+
+public class switchhat : MonoBehaviour 
+{
+
+    public Sprite tophat;
 	public Sprite strawhat;
 	public Sprite minimi;
 	public Sprite fungi;
@@ -11,7 +14,7 @@ public class switchhat : MonoBehaviour {
 	public Sprite crown;
 	public Sprite propeller;
 
-    public GameObject player;
+    GameObject player;
 	AudioSource hatfallsoff;
 	AudioSource gethatback;
 	
@@ -22,6 +25,7 @@ public class switchhat : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
+        player = transform.parent.gameObject;
 		
 		foreach(AudioSource source in GetComponents<AudioSource>())
         {
