@@ -1670,7 +1670,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 519970631}
   - 212: {fileID: 519970630}
-  - 50: {fileID: 519970628}
   - 114: {fileID: 519970627}
   - 61: {fileID: 519970632}
   m_Layer: 10
@@ -1693,21 +1692,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapon: {fileID: 863739277}
   breakingsound: {fileID: 1220317568}
---- !u!50 &519970628
-Rigidbody2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 519970626}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .200000003
-  m_GravityScale: 0
-  m_FixedAngle: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
 --- !u!212 &519970630
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1737,7 +1721,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519970626}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.86000013, y: -4.86000013, z: .0500000007}
+  m_LocalPosition: {x: 2.27999997, y: 1.89999998, z: .0500000007}
   m_LocalScale: {x: 1.10000002, y: 1.39999998, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

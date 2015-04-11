@@ -16,7 +16,10 @@ public class TargetController : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
     {
-        //Physics2D.IgnoreLayerCollision(10, 11);
+        if (GameObject.Find("MaskRoomSix").GetComponent<BoxCollider2D>().enabled == false)
+        {
+            Activate();     //NOT ACTING AS INTENDED
+        }
 	}
 
     void OnTriggerEnter2D(Collider2D other)
@@ -29,5 +32,11 @@ public class TargetController : MonoBehaviour
 
 
         }
+    }
+
+    void Activate()
+    {
+        GetComponent<BoxCollider2D>().enabled = true;       //Add physics components
+        gameObject.AddComponent<Rigidbody2D>();
     }
 }
